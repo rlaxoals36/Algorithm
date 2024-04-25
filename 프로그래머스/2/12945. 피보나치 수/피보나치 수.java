@@ -8,6 +8,7 @@ class Solution {
             else if(i==1) f[i] = 1;
             else {
                 f[i] = (f[i-2] % 1234567) + (f[i-1] % 1234567) % 1234567;
+                //f[i] = f[i-2] + f[i-1];
             }
         }
         answer = f[f.length-1]%1234567;
